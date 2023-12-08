@@ -1,41 +1,148 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#content {
+    position: relative;
+    top: 300px;
+    right: -100px;
+    z-index: 1;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 24px;
+}
+
+#content2 {
+    position: relative;
+    top: 9000px;
+    right: -100px;
+    z-index: 1;
+    color: #000000;
+    padding: 20px;
+    font-size: 24px;
+}
+
+#content3 {
+    position: relative;
+    top: 3px;
+    right: -1750px;
+    z-index: 2;
+}
+
+.content4 {
+    position: static;
+    z-index: 4;
+}
+
 .joli-bouton {
-    display: inline-block;
     padding: 10px 20px;
-    font-size: 16px;
-    text-align: center;
     text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #4CAF50;
-    color: #fff;
-    font-weight: bold;
+    background-color: #4CAF50; /* Vert pour la couleur de fond du bouton */
+    color: #fff; /* Blanc pour la couleur du texte */
+    font-weight: bold; /* Police grasse */
+    font-family: 'Arial', sans-serif; /* Changer la police ici */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .joli-bouton:hover {
-    background-color: #388E3C;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #388E3C; /* Vert plus foncé au survol */
+    transform: scale(1.1); /* Ajuste l'échelle au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre portée plus prononcée au survol */
 }
 
-body {
-    background-color:  #F5F5DC;
-    transition: background 0.3s ease;
+#overlay {
+    position: fixed;
+    bottom: 0; /* Mettez à "top: 0;" si vous souhaitez que le carré apparaisse en haut */
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: white;
+    z-index: 2;
+    transition: height 0.5s ease;
 }
 
-.image-container {
-    height: 50vh;
+header {
+    background-color: #fff; /* Fond blanc pour l'en-tête */
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée à gauche */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Assure que l'en-tête est au-dessus du reste du contenu */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Espace intérieur de l'en-tête */
+}
+
+.logo img {
+    max-width: 100%; /* Assurez-vous que le logo n'est pas plus large que son conteneur */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
     margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.bouton {
-    height: 30vh;
-    transform: scale(2.2);
-    font-family: 'Arial', sans-serif;
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Couleur du texte des liens */
+    font-weight: bold;
+}
+
+.info-container {
+    max-width: 700px; /* Largeur maximale du rectangle */
+    margin: 180px auto; /* Centrage du rectangle sur la page */
     display: flex;
     align-items: center;
-    justify-content: center;
+    background-color: #5e5e5e; /* Couleur de fond du rectangle */
+    padding: 70px; /* Espace intérieur du rectangle */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.info-container img {
+    max-width: 500px; /* Ajustez la largeur maximale de l'image selon vos besoins */
+    border-radius: 10%; /* Coins arrondis pour l'image */
+    margin-right: 20px; /* Espace entre l'image et le texte */
+}
+
+.text-content {
+    flex-grow: 1; /* Permet au texte de prendre tout l'espace disponible à droite de l'image */
+}
+
+.text-content h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* Couleur du texte du paragraphe */
 }
