@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page avec Vidéo de Fond</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1000;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-weight: bold; /* Police grasse */
+        font-family: 'Arial', sans-serif;
+      transform: translate(-50%, -50%);
+      transform: scale(2);
+      text-align: center;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<video autoplay loop muted>
+  <source src="Vido.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="content">
+  <p>aymeric.bretin@epitech.eu</p>
+  <p>ewan.schaffhauser@epitech.eu</p>
+  <p>Lucas.andres@epitech.eu</p>
+  <p>enzo.maillefer@epitech.eu</p>
+  <div class="rectangle"></div>
+</div>
+
+</body>
+</html>
