@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
         var scrollPosition = window.scrollY;
 
         // Réglez la hauteur de l'overlay en fonction de la position de défilement
-        overlay.style.height = Math.min(scrollPosition, 1000) + "px"; // Vous pouvez ajuster la valeur (100) selon vos besoins
+        overlay.style.height = Math.min(scrollPosition, 1500) + "px"; // Vous pouvez ajuster la valeur (100) selon vos besoins
     });
 });
