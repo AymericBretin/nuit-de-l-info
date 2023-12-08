@@ -14,7 +14,7 @@ function checkKonamiCode(event) {
 
         if (konamiCodeIndex === konamiCode.length) {
             // Konami Code réussi, ajoutez votre action ici
-            alert('Konami Code Activé!');
+            window.location = "./clicker/index.html"
             konamiCodeIndex = 0; // Réinitialise l'index pour la prochaine fois
         }
     } else {
